@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products — Danica Wine Stores (DWS)</title>
+  <meta name="description" content="Browse the full catalog of fine wines, whiskies, gins, vodkas, cream liqueurs, and non-alcoholic drinks at Danica Wine Stores." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css?v=30.0" />
+  <style>
+    .navbar { background: #0B0403 !important; }
+    .catalog-hero {
+      background: linear-gradient(180deg, #0B0403 0%, #160806 100%);
+      padding: 150px 0 50px;
+      text-align: center;
+      color: #fff;
+      border-bottom: 1px solid rgba(229,195,143,0.15);
+    }
+    .catalog-title {
+      font-family: var(--f-serif);
+      font-size: 52px;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .catalog-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 40px;
+      padding: 20px 24px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-subtle);
+    }
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-pill {
+      padding: 8px 18px;
+      border-radius: var(--r-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: #F0EDE6;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: var(--text-dark);
+      color: var(--gold);
+    }
+    .catalog-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #F7F5F0;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-pill);
+      padding: 8px 16px;
+      min-width: 260px;
+    }
+    .catalog-search-input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.85rem;
+      width: 100%;
+      color: var(--text-dark);
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+    .card-bottle-img-studio {
+      width: 100%;
+      height: 100%;
+      object-fit: contain !important;
+      mix-blend-mode: multiply !important;
+      max-height: 270px;
+      padding: 12px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.22));
+      transition: transform 0.4s var(--ease);
+    }
+    .product-card:hover .card-bottle-img-studio {
+      transform: scale(1.08) translateY(-4px);
+    }
+    .card-img-wrap-studio {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      border-radius: 14px;
+      background: radial-gradient(circle at center, rgba(229,195,143,0.12) 0%, rgba(247,245,240,0.4) 70%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="navbar scrolled">
+    <!-- TOP ROW: Logo | Search | Badges & Cart -->
+    <div class="nav-top-row">
+      <a href="index.html" class="nav-logo-block">
+        <svg class="nav-logo-emblem-svg" viewBox="-10 0 110 90" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="45" cy="45" r="43" fill="#0C0605"/>
+          <circle cx="45" cy="45" r="42" fill="none" stroke="#E5C38F" stroke-width="0.8" stroke-dasharray="2.5 2"/>
+          <circle cx="45" cy="45" r="36" fill="none" stroke="#E5C38F" stroke-width="0.9"/>
+          <path d="M45 7 C43 5, 41 7, 43 9 C44 10, 46 10, 47 9 C49 7, 47 5, 45 7Z" fill="#E5C38F"/>
+          <path d="M42 8 C40 6, 38 8, 40 10" fill="none" stroke="#E5C38F" stroke-width="0.6"/>
+          <path d="M48 8 C50 6, 52 8, 50 10" fill="none" stroke="#E5C38F" stroke-width="0.6"/>
+          <text x="45" y="58" text-anchor="middle" font-family="Great Vibes, cursive" fill="#E5C38F" letter-spacing="1">
+            <tspan font-size="42">DW</tspan><tspan font-size="32" dy="-2">S</tspan>
+          </text>
+        </svg>
+        <div class="nav-logo-text">
+          <span class="nav-logo-title">DANICA</span>
+          <span class="nav-logo-sub">WINE STORES</span>
+        </div>
+      </a>
+
+      <div class="nav-search-wrap">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="top-search" class="nav-search-input" placeholder="Search for wines..." />
+      </div>
+
+      <div class="nav-right-badges">
+        <div class="nav-badge">
+          <img src="https://api.iconify.design/lucide:store.svg?color=%23E0BA7C&width=28&height=28" class="badge-icon-img" alt="store" />
+          <div class="badge-text">
+            <span class="badge-sub">My store | Closing at 6pm</span>
+            <span class="badge-main">NAF Base Ikeja <i data-lucide="chevron-down" class="chevron-sm"></i></span>
+          </div>
+        </div>
+        <div class="nav-badge">
+          <img src="https://api.iconify.design/lucide:gift.svg?color=%23E0BA7C&width=28&height=28" class="badge-icon-img" alt="gift" />
+          <div class="badge-text">
+            <span class="badge-sub">Special perks</span>
+            <span class="badge-main">The Wine Club</span>
+          </div>
+        </div>
+        <button class="nav-cart-btn" id="open-cart-btn">
+          <i data-lucide="shopping-cart" class="cart-icon"></i>
+          <span class="cart-label">₦<span id="cart-total">0,00</span> (<span id="cart-count">0</span>)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW: Nav links -->
+    <div class="nav-bottom-row">
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-link has-dropdown">
+          <span>Wines</span><i data-lucide="chevron-down" class="chevron"></i>
+          <div class="dropdown">
+            <a href="products.html?category=wines">Red Wine</a>
+            <a href="products.html?category=wines">White Wine</a>
+            <a href="products.html?category=wines">Rosé Wine</a>
+            <a href="products.html?category=wines">Sparkling Wine</a>
+          </div>
+        </div>
+        <a href="products.html?category=whiskies" class="nav-link">Whiskies</a>
+        <a href="products.html?category=gin" class="nav-link">Gin</a>
+        <a href="products.html?category=vodka" class="nav-link">Vodka</a>
+        <a href="products.html?category=liqueur" class="nav-link">Cream Liqueurs</a>
+        <a href="products.html?category=nonalcoholic" class="nav-link">Non-Alcoholic</a>
+      </nav>
+    </div>
+  <!-- CATALOG MAIN CONTENT -->
+  <main class="main-canvas" style="padding-top: 150px;">
+    <div class="container">
+
+      <!-- FILTER & SEARCH BAR -->
+      <div class="filter-bar">
+        <div class="filter-pills" id="filter-pills">
+          <button class="filter-pill active" data-cat="all">All Products</button>
+          <button class="filter-pill" data-cat="wines">Wines</button>
+          <button class="filter-pill" data-cat="whiskies">Whiskies</button>
+          <button class="filter-pill" data-cat="gin">Gin</button>
+          <button class="filter-pill" data-cat="vodka">Vodka</button>
+          <button class="filter-pill" data-cat="liqueur">Cream Liqueurs</button>
+          <button class="filter-pill" data-cat="nonalcoholic">Non-Alcoholic</button>
+        </div>
+
+        <div class="catalog-search-wrap">
+          <i data-lucide="search" style="width:16px;height:16px;color:#88817D;"></i>
+          <input type="text" id="catalog-search" class="catalog-search-input" placeholder="Search catalog..." />
+        </div>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="catalog-grid" id="catalog-grid">
+
+        <!-- Item 1: 4th Street Sweet Red Wine -->
+        <div class="product-card" data-category="wines" data-title="4th Street Sweet Red Wine">
+          <span class="card-tag tag-red">RED WINE</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="4th-street-red.png?v=30.0" alt="4th Street Sweet Red Wine" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">4th Street Sweet Red</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦11,500</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍇 Sweet Berry</span>
+              <span class="flavor-tag">🍓 Fruity</span>
+              <span class="flavor-tag">✨ Smooth</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="4th Street Sweet Red Wine" data-price="11500">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Four Cousins Natural Sweet Red Wine -->
+        <div class="product-card" data-category="wines" data-title="Four Cousins Natural Sweet Red Wine">
+          <span class="card-tag tag-red">RED WINE</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="four-cousins-red.png?v=30.0" alt="Four Cousins Natural Sweet Red Wine" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Four Cousins Sweet Red</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦12,500</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍇 Sweet Berry</span>
+              <span class="flavor-tag">🍷 Ripe Plum</span>
+              <span class="flavor-tag">🌸 Smooth</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Four Cousins Natural Sweet Red Wine" data-price="12500">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Royal Castle Whisky Box -->
+        <div class="product-card" data-category="whiskies" data-title="Royal Castle Premium Blended Whisky Gift Box">
+          <span class="card-tag tag-white">WHISKEY</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="royal-castle-box.png?v=30.0" alt="Royal Castle Premium Blended Whisky Gift Box" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Royal Castle Gift Box</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦23,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">👑 Gift Edition</span>
+              <span class="flavor-tag">🍯 Honeyed Oak</span>
+              <span class="flavor-tag">✨ Aged 1983</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Royal Castle Premium Blended Whisky Gift Box" data-price="23000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+        <div class="product-card" data-category="whiskies" data-title="Jameson Black Barrel Irish Whiskey">
+          <span class="card-tag tag-white">WHISKEY</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="jameson-black-barrel.png?v=20.0" alt="Jameson Black Barrel Irish Whiskey" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Jameson Black Barrel</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦35,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🔥 Charred Oak</span>
+              <span class="flavor-tag">🍯 Vanilla</span>
+              <span class="flavor-tag">🪵 Double Aged</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Jameson Black Barrel Irish Whiskey" data-price="35000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 2: William Lawson's Blended Scotch -->
+        <div class="product-card" data-category="whiskies" data-title="William Lawson's Blended Scotch Whisky">
+          <span class="card-tag tag-white">WHISKEY</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="william-lawsons.png?v=20.0" alt="William Lawson's Blended Scotch Whisky" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">William Lawson's Scotch</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦24,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🌾 Highland Malt</span>
+              <span class="flavor-tag">🍎 Apple</span>
+              <span class="flavor-tag">✨ Bold</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="William Lawson's Blended Scotch Whisky" data-price="24000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Royal Castle Whisky -->
+        <div class="product-card" data-category="whiskies" data-title="Royal Castle Premium Blended Whisky">
+          <span class="card-tag tag-white">WHISKEY</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="royal-castle.png?v=20.0" alt="Royal Castle Premium Blended Whisky" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Royal Castle Whisky</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦21,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">👑 Mellow</span>
+              <span class="flavor-tag">🍯 Honeyed Oak</span>
+              <span class="flavor-tag">✨ Smooth</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Royal Castle Premium Blended Whisky" data-price="21000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 4: Royal Standard Scottish Vanilla -->
+        <div class="product-card" data-category="whiskies" data-title="Royal Standard Scottish Vanilla Whisky Liqueur">
+          <span class="card-tag tag-white">WHISKEY</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="royal-standard-vanilla.png?v=20.0" alt="Royal Standard Scottish Vanilla Whisky Liqueur" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Royal Standard Vanilla</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦19,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍦 Rich Vanilla</span>
+              <span class="flavor-tag">🌾 Scottish Malt</span>
+              <span class="flavor-tag">🍯 Sweet</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Royal Standard Scottish Vanilla Whisky Liqueur" data-price="19000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 5: Don Paloma Red Wine -->
+        <div class="product-card" data-category="wines" data-title="Don Paloma Red Wine">
+          <span class="card-tag tag-red">RED WINE</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="don-paloma.png?v=15.0" alt="Don Paloma Red Wine" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Don Paloma Red Wine</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦13,500</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍷 Rich Cocoa</span>
+              <span class="flavor-tag">🍇 Dark Grape</span>
+              <span class="flavor-tag">✨ Fruity</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Don Paloma Red Wine" data-price="13500">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Baileys Original Irish Cream -->
+        <div class="product-card" data-category="liqueur" data-title="Baileys Original Irish Cream">
+          <span class="card-tag tag-rose">CREAM LIQUEUR</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="baileys-irish-cream.png?v=15.0" alt="Baileys Original Irish Cream" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Baileys Irish Cream</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦22,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍫 Cocoa</span>
+              <span class="flavor-tag">🥛 Cream</span>
+              <span class="flavor-tag">🍦 Vanilla</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Baileys Original Irish Cream" data-price="22000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Asconi Agor Liqueur Red Wine -->
+        <div class="product-card" data-category="wines" data-title="Asconi Agor Liqueur Red Wine">
+          <span class="card-tag tag-red">RED WINE</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="asconi-agor.png?v=15.0" alt="Asconi Agor Liqueur Red Wine" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Asconi Agor Red Wine</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦19,500</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍷 Moldova Reserve</span>
+              <span class="flavor-tag">🍇 Sweet Plum</span>
+              <span class="flavor-tag">✨ Aged</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Asconi Agor Liqueur Red Wine" data-price="19500">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 4: Carlo Rossi California Red Wine -->
+        <div class="product-card" data-category="wines" data-title="Carlo Rossi California Red Wine">
+          <span class="card-tag tag-red">RED WINE</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="carlo-rossi.png?v=15.0" alt="Carlo Rossi California Red Wine" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Carlo Rossi Red Wine</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦16,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍷 Smooth Red</span>
+              <span class="flavor-tag">🍇 California</span>
+              <span class="flavor-tag">🍒 Berry</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Carlo Rossi California Red Wine" data-price="16000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 5: Best Marula Fruit Cream Liqueur -->
+        <div class="product-card" data-category="liqueur" data-title="Best Marula Fruit Cream Liqueur">
+          <span class="card-tag tag-rose">CREAM LIQUEUR</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="best-marula-cream.png?v=15.0" alt="Best Marula Fruit Cream Liqueur" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Best Marula Fruit Cream</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦18,500</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🥛 Cream</span>
+              <span class="flavor-tag">🍯 Caramel</span>
+              <span class="flavor-tag">🍍 Marula</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Best Marula Fruit Cream Liqueur" data-price="18500">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 6: Gordon's Dry Gin -->
+        <div class="product-card" data-category="gin" data-title="Gordon's Dry Gin">
+          <span class="card-tag tag-rose">GIN</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="gordons-gin.png?v=15.0" alt="Gordon's Dry Gin" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Gordon's Dry Gin</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦15,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🌿 Juniper</span>
+              <span class="flavor-tag">🍋 Citrus</span>
+              <span class="flavor-tag">🌾 Coriander</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Gordon's Dry Gin" data-price="15000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 7: Jameson Irish Whiskey -->
+        <div class="product-card" data-category="whiskies" data-title="Jameson Irish Whiskey">
+          <span class="card-tag tag-white">WHISKEY</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="jameson-whiskey.png?v=15.0" alt="Jameson Irish Whiskey" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Jameson Irish Whiskey</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦28,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🪵 Oak</span>
+              <span class="flavor-tag">🍦 Vanilla</span>
+              <span class="flavor-tag">🍯 Honey</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Jameson Irish Whiskey" data-price="28000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 8: Cape More Red Wine -->
+        <div class="product-card" data-category="wines" data-title="Cape More Red Wine">
+          <span class="card-tag tag-red">RED WINE</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="cape-more-red-wine.png?v=15.0" alt="Cape More Red Wine" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Cape More Red Wine</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦14,000</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍒 Red Berry</span>
+              <span class="flavor-tag">🪵 Oak</span>
+              <span class="flavor-tag">🍷 Bold</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Cape More Red Wine" data-price="14000">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+        <!-- Item 9: Chamdor Sparkling Red Grape Drink -->
+        <div class="product-card" data-category="nonalcoholic" data-title="Chamdor Sparkling Red Grape Drink">
+          <span class="card-tag tag-white">NON-ALCOHOLIC</span>
+          <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+          <div class="card-img-wrap-studio">
+            <img src="chamdor-sparkling.png?v=15.0" alt="Chamdor Sparkling Red Grape Drink" class="card-bottle-img-studio" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-name">Chamdor Sparkling Grape</h3>
+            <div class="card-price-row">
+              <span class="card-price">₦6,500</span>
+            </div>
+            <div class="card-flavor-row">
+              <span class="flavor-tag">🍇 Red Grape</span>
+              <span class="flavor-tag">✨ Sparkling</span>
+              <span class="flavor-tag">🍓 Sweet</span>
+            </div>
+            <button class="btn-card-buy add-to-cart" data-title="Chamdor Sparkling Red Grape Drink" data-price="6500">Add to cart</button>
+            <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Visit us</h4>
+        <p class="footer-text">NAF Base Ikeja,<br />Lagos State,<br />Nigeria</p>
+        <p class="footer-text" style="margin-top:12px">
+          <strong>Email:</strong><br />
+          <a href="mailto:danicawinestore@gmail.com" style="color:var(--gold);text-decoration:underline;">danicawinestore@gmail.com</a>
+        </p>
+        <p class="footer-text" style="margin-top:12px"><strong>Store Hours:</strong><br />Sun: Closed<br />Mon — Sat: 12:00 — 22:00</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="products.html">Search</a></li>
+          <li><a href="index.html#featured">About Us</a></li>
+          <li><a href="products.html">Featured Wines</a></li>
+          <li><a href="index.html#wine-club">The Wine Club</a></li>
+          <li><a href="#">Danica Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Follow us for more</h4>
+        <p class="footer-text">Join our community and stay up to date with new vintage releases.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/danicawinestore" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram" title="Instagram: @danicawinestore">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.tiktok.com/@danicawinestore" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok" title="TikTok: @danicawinestore">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53 2h3.17a4.9 4.9 0 0 0 3.86 3.88V9a8.1 8.1 0 0 1-3.86-1.07v6.62a6.45 6.45 0 1 1-6.45-6.45c.35 0 .7.03 1.04.09v3.29a3.25 3.25 0 1 0 2.24 3.07V2z"/></svg>
+          </a>
+          <a href="mailto:danicawinestore@gmail.com" class="social-btn" aria-label="Gmail" title="Email: danicawinestore@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p class="footer-text">Subscribe to receive 10% off your first order and private cellar invitations.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email..." required />
+          <button type="submit" aria-label="Subscribe"><i data-lucide="send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Danica Wine Stores (DWS). All rights reserved.</span>
+      <div class="payment-row">
+        <span>VISA</span><span>MC</span><span>AMEX</span><span>APPLE PAY</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Your Basket</h3>
+        <span class="drawer-badge" id="drawer-count">0</span>
+      </div>
+      <button class="drawer-close" id="close-cart-btn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="drawer-body" id="drawer-body">
+      <p class="drawer-empty">Your wine basket is currently empty.</p>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-sub-row">
+        <span>Subtotal</span>
+        <span class="drawer-subtotal">₦<span id="drawer-subtotal">0,00</span></span>
+      </div>
+      <p class="drawer-note">Taxes & shipping calculated at checkout</p>
+      <button class="btn-checkout" id="checkout-btn">Proceed to checkout</button>
+    </div>
+  </aside>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="script.js?v=6.0"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+
+    // Catalog Filter & Live Search logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const pills = document.querySelectorAll('#filter-pills .filter-pill');
+      const cards = document.querySelectorAll('#catalog-grid .product-card');
+      const searchInput = document.getElementById('catalog-search');
+
+      function filterCatalog() {
+        const activePill = document.querySelector('#filter-pills .filter-pill.active');
+        const cat = activePill ? activePill.dataset.cat : 'all';
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        cards.forEach(card => {
+          const cardCat = card.dataset.category;
+          const cardTitle = card.dataset.title.toLowerCase();
+          const matchesCat = (cat === 'all' || cardCat === cat);
+          const matchesQuery = (!query || cardTitle.includes(query));
+
+          if (matchesCat && matchesQuery) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          filterCatalog();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterCatalog);
+      }
+
+      // Check URL query parameters for category
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlCat = urlParams.get('category');
+      if (urlCat) {
+        const targetPill = document.querySelector(`#filter-pills .filter-pill[data-cat="${urlCat}"]`);
+        if (targetPill) {
+          pills.forEach(p => p.classList.remove('active'));
+          targetPill.classList.add('active');
+          filterCatalog();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

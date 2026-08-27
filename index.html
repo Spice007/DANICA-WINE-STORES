@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velluno — Organic Wines</title>
+  <meta name="description" content="Discover rare organic wines, sommelier-curated vintages, and private cellar reserves. Exceptional wines delivered straight to your door." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Pacifico&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css?v=4.0" />
+</head>
+<body>
+
+  <!-- Ã¢â¢âÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢â
+       Ã¢â¢â                    NAVBAR                       Ã¢â¢â
+       Ã¢â¢Å¡Ã¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢Â -->
+  <header id="navbar" class="navbar">
+    <!-- TOP ROW: Logo | Search | Badges & Cart -->
+    <div class="nav-top-row">
+      <div class="nav-logo-block">
+        <!-- Circular emblem as single SVG -->
+        <svg class="nav-logo-emblem-svg" viewBox="-10 0 110 90" xmlns="http://www.w3.org/2000/svg">
+          <!-- background fill -->
+          <circle cx="45" cy="45" r="43" fill="#0C0605"/>
+          <!-- outer dashed ring -->
+          <circle cx="45" cy="45" r="42" fill="none" stroke="#E5C38F" stroke-width="0.8" stroke-dasharray="2.5 2"/>
+          <!-- inner solid ring -->
+          <circle cx="45" cy="45" r="36" fill="none" stroke="#E5C38F" stroke-width="0.9"/>
+          <!-- tiny leaf ornament at top -->
+          <path d="M45 7 C43 5, 41 7, 43 9 C44 10, 46 10, 47 9 C49 7, 47 5, 45 7Z" fill="#E5C38F"/>
+          <path d="M42 8 C40 6, 38 8, 40 10" fill="none" stroke="#E5C38F" stroke-width="0.6"/>
+          <path d="M48 8 C50 6, 52 8, 50 10" fill="none" stroke="#E5C38F" stroke-width="0.6"/>
+          <!-- DWS cursive monogram -->
+          <text
+            x="45" y="58"
+            text-anchor="middle"
+            font-family="Great Vibes, cursive"
+            fill="#E5C38F"
+            letter-spacing="1"
+          ><tspan font-size="42">DW</tspan><tspan font-size="32" dy="-2">S</tspan></text>
+        </svg>
+        <!-- Separator + wordmark -->
+        <div class="nav-logo-text">
+          <span class="nav-logo-title">DANICA</span>
+          <span class="nav-logo-sub">WINE STORES</span>
+        </div>
+      </div>
+
+      <div class="nav-search-wrap">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" class="nav-search-input" placeholder="Search for wines..." />
+      </div>
+
+      <div class="nav-right-badges">
+        <div class="nav-badge">
+          <img src="https://api.iconify.design/lucide:store.svg?color=%23E0BA7C&width=28&height=28" class="badge-icon-img" alt="store" />
+          <div class="badge-text">
+            <span class="badge-sub">My store | Closing at 6pm</span>
+            <span class="badge-main">Lively Store <i data-lucide="chevron-down" class="chevron-sm"></i></span>
+          </div>
+        </div>
+        <div class="nav-badge">
+          <img src="https://api.iconify.design/lucide:gift.svg?color=%23E0BA7C&width=28&height=28" class="badge-icon-img" alt="gift" />
+          <div class="badge-text">
+            <span class="badge-sub">Special perks</span>
+            <span class="badge-main">The Wine Club</span>
+          </div>
+        </div>
+        <button class="nav-cart-btn" id="open-cart-btn">
+          <i data-lucide="shopping-cart" class="cart-icon"></i>
+          <span class="cart-label">₦<span id="cart-total">0,00</span> (<span id="cart-count">0</span>)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW: Nav links -->
+    <div class="nav-bottom-row">
+      <nav class="nav-links">
+        <div class="nav-link has-dropdown">
+          <span>Wines</span><i data-lucide="chevron-down" class="chevron"></i>
+          <div class="dropdown">
+            <a href="#collection">Red Wine</a>
+            <a href="#collection">White Wine</a>
+            <a href="#collection">Rosé Wine</a>
+            <a href="#collection">Sparkling Wine</a>
+          </div>
+        </div>
+        <a href="#collection" class="nav-link">Whiskies</a>
+        <a href="#collection" class="nav-link">Gin</a>
+        <a href="#collection" class="nav-link">Vodka</a>
+        <a href="#collection" class="nav-link">Cream Liqueurs</a>
+        <a href="#collection" class="nav-link">Non-Alcoholic</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Ã¢â¢âÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢â
+       Ã¢â¢â                  HERO SECTION                   Ã¢â¢â
+       Ã¢â¢Å¡Ã¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢Â -->
+  <section id="hero" class="hero">
+    <!-- Hero Background Image -->
+    <div class="hero-bg-image"></div>
+
+    <!-- Dark Vignette + Color Tint Overlay -->
+    <div class="hero-vignette"></div>
+    <div class="hero-tint"></div>
+
+    <!-- Hero Text Content -->
+    <div class="hero-content">
+      <span class="hero-eyebrow">INTRODUCING</span>
+      <h1 class="hero-title">Organic Wines</h1>
+      <div class="hero-btns">
+        <a href="#featured" class="btn-hero btn-hero-gold">RED WINES</a>
+        <a href="#featured" class="btn-hero btn-hero-outline">WHITE WINES</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- â•–â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•–
+       â•‘               LIGHT CANVAS MAIN                â•‘
+       â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  -->
+  <main class="main-canvas">
+
+    <!-- â– â–  FINEST SELECTION â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â–  -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-head centered">
+          <h2 class="section-title">Finest Selection</h2>
+          <span class="section-label">EXPLORE</span>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Card 1: Four Cousins Sweet Red (WINES) -->
+          <div class="product-card">
+            <span class="card-tag tag-red">WINE</span>
+            <button class="wishlist-btn" data-id="1"><i data-lucide="heart"></i></button>
+
+            <div class="card-img-wrap">
+              <img
+                src="cape-more-red-wine.png"
+                alt="Four Cousins Natural Sweet Red Wine"
+                class="card-bottle-img"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Four Cousins Sweet Red</h3>
+              <div class="card-price-row">
+                <span class="card-price">₦12,500</span>
+              </div>
+              <div class="card-flavor-row">
+                <span class="flavor-tag">🍇 Sweet Berry</span>
+                <span class="flavor-tag">🍷 Ripe Plum</span>
+                <span class="flavor-tag">🌸 Smooth</span>
+              </div>
+              <button class="btn-card-buy add-to-cart" data-title="Four Cousins Natural Sweet Red Wine" data-price="12500">Buy now</button>
+              <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Jameson Irish Whiskey (WHISKEY) -->
+          <div class="product-card">
+            <span class="card-tag tag-white">WHISKEY</span>
+            <button class="wishlist-btn" data-id="2"><i data-lucide="heart"></i></button>
+
+            <div class="card-img-wrap">
+              <img
+                src="jameson-whiskey.png"
+                alt="Jameson Irish Whiskey"
+                class="card-bottle-img"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Jameson Irish Whiskey</h3>
+              <div class="card-price-row">
+                <span class="card-price">₦28,000</span>
+              </div>
+              <div class="card-flavor-row">
+                <span class="flavor-tag">🪵 Oak</span>
+                <span class="flavor-tag">🍦 Vanilla</span>
+                <span class="flavor-tag">🍯 Honey</span>
+              </div>
+              <button class="btn-card-buy add-to-cart" data-title="Jameson Irish Whiskey" data-price="28000">Buy now</button>
+              <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Gordon's Dry Gin (GIN) -->
+          <div class="product-card">
+            <span class="card-tag tag-rose">GIN</span>
+            <button class="wishlist-btn" data-id="3"><i data-lucide="heart"></i></button>
+
+            <div class="card-img-wrap">
+              <img
+                src="gordons-gin.png"
+                alt="Gordon's Dry Gin"
+                class="card-bottle-img"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Gordon's Dry Gin</h3>
+              <div class="card-price-row">
+                <span class="card-price">₦15,000</span>
+              </div>
+              <div class="card-flavor-row">
+                <span class="flavor-tag">🌿 Juniper</span>
+                <span class="flavor-tag">🍋 Citrus</span>
+                <span class="flavor-tag">🌾 Coriander</span>
+              </div>
+              <button class="btn-card-buy add-to-cart" data-title="Gordon's Dry Gin" data-price="15000">Buy now</button>
+              <p class="card-pickup"><i data-lucide="check-circle-2" class="pickup-icon"></i> Available for pickup at NAF Base Ikeja</p>
+            </div>
+          </div>
+
+        </div><!-- /products-grid -->
+
+        <div class="grid-footer">
+          <div class="dots-row">
+            <span class="dot dot-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <a href="products.html" class="btn-view-all">View all products</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ↂↂ PROMO BANNER ↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂↂ -->
+    <section class="promo-banner">
+      <img
+        src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=1600&auto=format&q=85&fit=crop"
+        alt="Wine cellar barrels"
+        class="promo-bg-img"
+        loading="lazy"
+      />
+      <div class="promo-dark-overlay"></div>
+      <div class="promo-inner container">
+        <span class="promo-eyebrow">in vino veritas</span>
+        <h2 class="promo-headline">Explore exceptional wines,<br />delivered straight to your door.</h2>
+        <a href="#collection" class="btn-promo">EXPLORE</a>
+      </div>
+    </section>
+
+
+    <!-- Ã¢ââ¦Ã¢ââ¦ CATEGORY CARDS Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦Ã¢ââ¦ -->
+    <section id="category-cards" class="section">
+      <div class="container">
+        <div class="section-head centered">
+          <h2 class="section-title">Wine Categories</h2>
+          <span class="section-label">EXPLORE OUR 4 WINE CATEGORIES</span>
+        </div>
+
+        <div class="cat-grid" id="cat-track">
+
+          <!-- Red Wine -->
+          <div class="cat-card">
+            <img
+              src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&q=85&fit=crop"
+              alt="Red Wine Selection"
+              class="cat-bg-img"
+              loading="lazy"
+            />
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <span class="cat-eyebrow">Rich &amp; Bold</span>
+              <h3 class="cat-title">Red Wine</h3>
+              <a href="#collection" class="btn-cat">SHOP</a>
+            </div>
+          </div>
+
+          <!-- White Wine -->
+          <div class="cat-card">
+            <img
+              src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?w=800&auto=format&q=85&fit=crop"
+              alt="White Wine Selection"
+              class="cat-bg-img"
+              loading="lazy"
+            />
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <span class="cat-eyebrow">Crisp &amp; Refreshing</span>
+              <h3 class="cat-title">White Wine</h3>
+              <a href="#collection" class="btn-cat">SHOP</a>
+            </div>
+          </div>
+
+          <!-- Rosé Wine -->
+          <div class="cat-card">
+            <img
+              src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&auto=format&q=85&fit=crop"
+              alt="Rosé Wine Selection"
+              class="cat-bg-img"
+              loading="lazy"
+            />
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <span class="cat-eyebrow">Floral &amp; Delicate</span>
+              <h3 class="cat-title">Rosé Wine</h3>
+              <a href="#collection" class="btn-cat">SHOP</a>
+            </div>
+          </div>
+
+          <!-- Sparkling Wine -->
+          <div class="cat-card">
+            <img
+              src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&auto=format&q=85&fit=crop"
+              alt="Sparkling Wine Selection"
+              class="cat-bg-img"
+              loading="lazy"
+            />
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <span class="cat-eyebrow">Effervescent &amp; Regal</span>
+              <h3 class="cat-title">Sparkling Wine</h3>
+              <a href="#collection" class="btn-cat">SHOP</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Category Slider Dots -->
+        <div class="dots-row" id="cat-dots" style="margin-top: 32px;">
+          <span class="dot dot-active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ║ COLLECTION INSPECTOR ║ -->
+    <section id="collection" class="section">
+      <div class="container">
+        <div class="collection-tabs-row">
+          <span class="tabs-heading">Categories</span>
+          <div class="tabs-list">
+            <button class="tab active" data-tab="wines">Wines</button>
+            <button class="tab" data-tab="whiskies">Whiskies</button>
+            <button class="tab" data-tab="gin">Gin</button>
+            <button class="tab" data-tab="vodka">Vodka</button>
+            <button class="tab" data-tab="liqueur">Cream Liqueurs</button>
+            <button class="tab" data-tab="nonalcoholic">Non-Alcoholic</button>
+          </div>
+        </div>
+
+        <div class="inspector-wrap">
+          <!-- LEFT: Product Photo -->
+          <div class="inspector-photo-col">
+            <div class="inspector-photo-box">
+              <img
+                id="insp-photo"
+                src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&auto=format&q=90&fit=crop"
+                alt="Featured wine bottle"
+                class="inspector-photo"
+              />
+            </div>
+          </div>
+
+          <!-- RIGHT: Product Details -->
+          <div class="inspector-details-col">
+            <span class="insp-eyebrow" id="insp-eyebrow">Natural Sweet Red Wine</span>
+            <h2 class="insp-title" id="insp-title">Four Cousins Natural Sweet Red Wine</h2>
+
+            <p class="insp-desc" id="insp-desc">
+              A rich, ruby-red wine featuring delicious ripe plum and berry aromas, unashamedly sweet with a smooth, fruity finish. Perfect for any celebration.
+            </p>
+
+            <div class="insp-profile-row">
+              <span class="profile-heading">Profile</span>
+              <div class="profile-tags" id="insp-profile">
+                <span class="profile-tag">🍇 Sweet Berry</span>
+                <span class="profile-tag">🍷 Ripe Plum</span>
+                <span class="profile-tag">🌸 Smooth</span>
+                <span class="profile-tag">🍒 Red Fruit</span>
+              </div>
+            </div>
+
+            <div class="insp-price-row">
+              <span class="insp-price" id="insp-price">₦12,500</span>
+              <span class="insp-old-price" id="insp-old-price">₦15,000</span>
+              <span class="insp-save-badge" id="insp-save">SAVE ₦2,500</span>
+            </div>
+
+            <div class="insp-actions">
+              <div class="qty-stepper">
+                <button class="qty-btn" id="qty-minus">−</button>
+                <span class="qty-num" id="qty-val">1</span>
+                <button class="qty-btn" id="qty-plus">+</button>
+              </div>
+              <button class="btn-add-cart add-to-cart" id="insp-add-btn" data-title="Four Cousins Natural Sweet Red Wine" data-price="12500">Add to cart</button>
+              <button class="btn-buy-now" id="insp-buy-btn">Buy it now</button>
+            </div>
+
+            <div class="insp-delivery-card">
+              <div class="delivery-row">
+                <i data-lucide="check-circle-2" class="delivery-check"></i>
+                <span class="delivery-title">Available for pickup</span>
+              </div>
+              <p class="delivery-detail"><strong>Lively Store</strong> · Usually ready in 2 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ⚡⚡ WINE CLUB ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ -->
+    <section id="wine-club" class="section">
+      <div class="container">
+        <div class="club-wrap">
+          <!-- Left -->
+          <div class="club-left">
+            <h2 class="club-title">The <em>Wine</em> Club</h2>
+            <p class="club-desc">
+              The club is designed to offer members exclusive access to premier small-batch vintages, private cellar tastings, and curations from top sommeliers around the world.
+            </p>
+            <a href="#events" class="btn-club">LEARN MORE</a>
+          </div>
+          <!-- Right: Terracotta Seal -->
+          <div class="club-right">
+            <div class="club-seal">
+              <div class="seal-ring">
+                <i data-lucide="wine" class="seal-icon"></i>
+                <span class="seal-title">WINE CLUB</span>
+                <span class="seal-sub">EST. 2018</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ┄ UPCOMING EVENTS ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄ -->
+    <section id="events" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Upcoming Events</h2>
+        </div>
+        <div class="events-list">
+          <div class="event-row">
+            <div>
+              <h3 class="event-name">Wine Tasting Masterclass</h3>
+              <p class="event-time"><i data-lucide="calendar" class="cal-icon"></i> Tue 24 March · 5:00pm — 8:00pm</p>
+            </div>
+            <button class="btn-register" data-event="Wine Tasting Masterclass">REGISTER</button>
+          </div>
+          <div class="event-row">
+            <div>
+              <h3 class="event-name">Sommelier Secret Night</h3>
+              <p class="event-time"><i data-lucide="calendar" class="cal-icon"></i> Thu 26 March · 6:30pm — 9:30pm</p>
+            </div>
+            <button class="btn-register" data-event="Sommelier Secret Night">REGISTER</button>
+          </div>
+          <div class="event-row">
+            <div>
+              <h3 class="event-name">Harvest Gala Evening</h3>
+              <p class="event-time"><i data-lucide="calendar" class="cal-icon"></i> Fri 03 April · 7:00pm — 11:00pm</p>
+            </div>
+            <button class="btn-register" data-event="Harvest Gala Evening">REGISTER</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ║ TESTIMONIAL SLIDER ║ -->
+    <section class="testimonial-section">
+      <div class="container">
+        
+        <div class="testimonial-slider-track" id="testimonial-track">
+          
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <span class="testimonial-author">JOHN SMITH</span>
+            <span class="testimonial-role">Verified Cellar Collector</span>
+            <blockquote class="testimonial-quote">
+              "I have been a customer of Velluno Wines for years and have always been impressed with the quality and variety of wines they offer. The staff is knowledgeable and always willing to help me find the perfect bottle for any occasion."
+            </blockquote>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <span class="testimonial-author">ELENA ROSTOVA</span>
+            <span class="testimonial-role">Master Sommelier · Paris</span>
+            <blockquote class="testimonial-quote">
+              "Velluno's private reserve cuvées are amongst the finest organic wines I have ever tasted. Their commitment to biodynamic viticulture and rare vintages is completely unparalleled."
+            </blockquote>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <span class="testimonial-author">MARCUS VANCE</span>
+            <span class="testimonial-role">Executive Wine Director</span>
+            <blockquote class="testimonial-quote">
+              "Finding small-batch organic wines with this level of elegance and structure is rare. Velluno delivers an exceptional sommelier-curated cellar experience directly to your doorstep."
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="dots-row dots-light" id="testimonial-dots">
+          <span class="dot dot-active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Visit us</h4>
+        <p class="footer-text">NAF Base Ikeja,<br />Lagos State,<br />Nigeria</p>
+        <p class="footer-text" style="margin-top:12px">
+          <strong>Email:</strong><br />
+          <a href="mailto:danicawinestore@gmail.com" style="color:var(--gold);text-decoration:underline;">danicawinestore@gmail.com</a>
+        </p>
+        <p class="footer-text" style="margin-top:12px"><strong>Store Hours:</strong><br />Sun: Closed<br />Mon — Sat: 12:00 — 22:00</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Search</a></li>
+          <li><a href="#featured">About Us</a></li>
+          <li><a href="#featured">Featured Wines</a></li>
+          <li><a href="#wine-club">The Wine Club</a></li>
+          <li><a href="#">Danica Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Follow us for more</h4>
+        <p class="footer-text">Join our community and stay up to date with new vintage releases.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/danicawinestore" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram" title="Instagram: @danicawinestore">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.tiktok.com/@danicawinestore" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok" title="TikTok: @danicawinestore">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53 2h3.17a4.9 4.9 0 0 0 3.86 3.88V9a8.1 8.1 0 0 1-3.86-1.07v6.62a6.45 6.45 0 1 1-6.45-6.45c.35 0 .7.03 1.04.09v3.29a3.25 3.25 0 1 0 2.24 3.07V2z"/></svg>
+          </a>
+          <a href="mailto:danicawinestore@gmail.com" class="social-btn" aria-label="Gmail" title="Email: danicawinestore@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p class="footer-text">Subscribe to receive 10% off your first order and private cellar invitations.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email..." required />
+          <button type="submit" aria-label="Subscribe"><i data-lucide="send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Danica Wine Stores (DWS). All rights reserved.</span>
+      <div class="payment-row">
+        <span>VISA</span><span>MC</span><span>AMEX</span><span>APPLE PAY</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Ã¢â¢âÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢â
+       Ã¢â¢â               CART DRAWER                       Ã¢â¢â
+       Ã¢â¢Å¡Ã¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢Â -->
+  <div class="drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <h3>Your Cart (<span id="drawer-count">0</span>)</h3>
+      <button id="close-cart"><i data-lucide="x"></i></button>
+    </div>
+    <div class="drawer-body" id="drawer-body">
+      <p class="drawer-empty">Your wine basket is currently empty.</p>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-subtotal-row">
+        <span>Subtotal</span>
+        <span>₦<span id="drawer-subtotal">0,00</span></span>
+      </div>
+      <p class="drawer-shipping">Taxes &amp; shipping calculated at checkout.</p>
+      <button class="btn-checkout">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+
+  <!-- Ã¢â¢âÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢â
+       Ã¢â¢â            EVENT REGISTER MODAL                 Ã¢â¢â
+       Ã¢â¢Å¡Ã¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢ÂÃ¢â¢Â -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal-box" id="event-modal">
+    <button class="modal-close" id="close-modal"><i data-lucide="x"></i></button>
+    <span class="modal-eyebrow">RESERVE YOUR PLACE</span>
+    <h3 class="modal-title" id="modal-event-name">Wine Tasting Masterclass</h3>
+    <form id="event-form" class="modal-form">
+      <div class="form-field">
+        <label>Full Name</label>
+        <input type="text" placeholder="e.g. John Smith" required />
+      </div>
+      <div class="form-field">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@example.com" required />
+      </div>
+      <div class="form-field">
+        <label>Number of Guests</label>
+        <select required>
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="4">4 Guests</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-modal-submit">Confirm Reservation</button>
+    </form>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="script.js?v=4.0"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+    (function() {
+      var nav = document.getElementById('navbar');
+      if (!nav) return;
+      function checkNav() {
+        var top = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (top > 15) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', checkNav, { passive: true });
+      document.addEventListener('scroll', checkNav, { passive: true });
+      checkNav();
+    })();
+  </script>
+</body>
+</html>
+
